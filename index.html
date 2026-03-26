@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rohit Thakur | Project Experience Hub</title>
+    <meta
+      name="description"
+      content="A single-page portfolio hub for Rohit Thakur's featured projects, Codex builds, and experience highlights."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home">Rohit Thakur</a>
+        <nav class="nav">
+          <a href="#selected-work">Selected Work</a>
+          <a href="#technical-projects">Technical Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero section">
+          <div class="hero-copy reveal">
+            <p class="section-kicker">Work Portfolio</p>
+            <h1>A direct view of my projects, technical work, and experience.</h1>
+            <p class="hero-text">
+              This site brings my work into one place so it is easy to review. It covers featured projects,
+              supporting technical work, and experience that adds context to how I approach problems.
+            </p>
+            <div class="hero-actions">
+              <a class="button button--primary" href="#selected-work">View selected work</a>
+              <a class="button button--ghost" href="assets/documents/rohit-thakur-resume.pdf" target="_blank" rel="noreferrer">Open resume</a>
+            </div>
+            <ul class="hero-tags">
+              <li>Analytics</li>
+              <li>Software</li>
+              <li>Business systems</li>
+              <li>Presentation-ready work</li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel reveal">
+            <div class="panel-label">Overview</div>
+            <div class="metric-grid">
+              <article class="metric-card">
+                <span class="metric-value">38</span>
+                <span class="metric-label">pro teams analyzed</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">850+</span>
+                <span class="metric-label">league matches reviewed</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">4,500+</span>
+                <span class="metric-label">players studied</span>
+              </article>
+              <article class="metric-card">
+                <span class="metric-value">10</span>
+                <span class="metric-label">SharePoint sites launched</span>
+              </article>
+            </div>
+            <div class="panel-note">
+              Start with the featured work, then use the technical projects and experience sections for a fuller
+              picture of the way I build, analyze, and communicate.
+            </div>
+          </aside>
+        </section>
+
+        <section id="selected-work" class="section">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Selected Work</p>
+            <h2>Selected work</h2>
+            <p>
+              Each project starts with the essentials and opens into a deeper case-study view where more context is
+              useful.
+            </p>
+          </div>
+          <div id="featured-grid" class="card-grid featured-grid"></div>
+        </section>
+
+        <section id="technical-projects" class="section">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Technical Projects</p>
+            <h2>Technical projects</h2>
+            <p>
+              This section covers smaller builds and supporting work that help show range beyond the main case
+              studies.
+            </p>
+          </div>
+          <div id="technical-grid" class="card-grid compact-grid"></div>
+        </section>
+
+        <section id="experience" class="section">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Experience Highlights</p>
+            <h2>Experience</h2>
+            <p>
+              Not every strong experience has a finished artifact. These cards keep the context clear by focusing on
+              the problem, the work, the tools, and the result.
+            </p>
+          </div>
+          <div id="experience-grid" class="card-grid experience-grid"></div>
+        </section>
+
+        <section id="skills" class="section">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Skills &amp; Methods</p>
+            <h2>Core tools and working modes</h2>
+            <p>
+              This is curated to match the work on the page, not just to mirror a resume list.
+            </p>
+          </div>
+          <div id="skills-grid" class="skills-grid"></div>
+        </section>
+
+        <section id="contact" class="section contact-section reveal">
+          <div class="contact-card">
+            <p class="section-kicker">Contact</p>
+            <h2>Contact</h2>
+            <p>
+              The page includes direct links to uploaded artifacts and supporting material, and it is built to grow
+              as I add more work over time.
+            </p>
+            <div class="contact-actions">
+              <a class="button button--primary" href="mailto:rt4362@uncw.edu">rt4362@uncw.edu</a>
+              <a class="button button--ghost" href="tel:+19194546826">(919) 454-6826</a>
+              <a class="button button--ghost" href="assets/documents/rohit-thakur-resume.pdf" target="_blank" rel="noreferrer">Download resume</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="project-modal" class="modal" hidden>
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close case study">Close</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
