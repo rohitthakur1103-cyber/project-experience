@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Agent | Rohit Thakur</title>
+    <meta
+      name="description"
+      content="Project page for Job Agent, a local job discovery and application workflow."
+    >
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="subpage-shell">
+      <a class="page-back" href="../index.html">← Back to portfolio</a>
+
+      <section class="project-hero-panel">
+        <p class="section-kicker">Technical Project</p>
+        <span class="project-status">In progress</span>
+        <h1>Job Agent</h1>
+        <p class="hero-text">
+          Job Agent is a local workflow for job discovery, filtering, shortlist generation, and application
+          tracking. The goal is to reduce friction between finding good roles and preparing a focused application
+          packet.
+        </p>
+        <ul class="meta-strip">
+          <li>Python</li>
+          <li>SQLite</li>
+          <li>CLI + dashboard</li>
+          <li>Application workflow</li>
+        </ul>
+        <div class="project-actions">
+          <a class="button button--ghost" href="../assets/documents/job-agent-sample-packet-summary.md" target="_blank" rel="noreferrer">Open sample packet summary</a>
+          <a class="button button--ghost" href="../assets/documents/job-agent-sample-cover-letter.md" target="_blank" rel="noreferrer">Open sample cover letter</a>
+          <a class="button button--ghost" href="../assets/documents/job-agent-sample-resume-variant.md" target="_blank" rel="noreferrer">Open sample resume variant</a>
+        </div>
+      </section>
+
+      <section class="project-grid">
+        <article class="project-panel">
+          <h2>Current scope</h2>
+          <ul class="list-tight">
+            <li>Discovers jobs from Built In and TeamWork Online.</li>
+            <li>Normalizes postings into one schema.</li>
+            <li>Stores jobs and shortlist state in SQLite.</li>
+            <li>Filters for role, location, and salary fit.</li>
+            <li>Supports a local dashboard for application review.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Why it matters</h2>
+          <p>
+            The project is focused on making the application process more systematic. Instead of treating job search
+            as a collection of tabs and notes, it turns it into a repeatable workflow with persistence, filtering,
+            and document preparation.
+          </p>
+        </article>
+
+        <article class="project-panel">
+          <h2>How it is structured</h2>
+          <ul class="list-tight">
+            <li>Adapters handle discovery and parsing from multiple sources.</li>
+            <li>Pipeline services manage filtering, scoring, and shortlist generation.</li>
+            <li>SQLite keeps local state for jobs, stages, and generated documents.</li>
+            <li>A dashboard layer surfaces the working queue for review and follow-through.</li>
+          </ul>
+        </article>
+
+        <article class="project-panel">
+          <h2>Public access note</h2>
+          <p>
+            The full interactive app is still a local build. This project page exists so reviewers can still see the
+            workflow, sample outputs, and the type of system that has been built so far.
+          </p>
+        </article>
+      </section>
+
+      <section class="sample-grid">
+        <article class="sample-card">
+          <h3>Sample packet summary</h3>
+          <pre class="text-sample">Job: Senior Business Intelligence Analyst
+Company: Faire
+Salary: 170K-234K Annually
+Top aligned skills: SQL, Python, Tableau, Excel, Power BI
+Experience selected: Business Intelligence Analyst, Sporting Data Analyst</pre>
+        </article>
+
+        <article class="sample-card">
+          <h3>Sample generated writing</h3>
+          <pre class="text-sample">My experience with SQL, Python, Tableau, Excel matches the role's emphasis on turning data into decisions.
+
+Built Tableau dashboards across league KPIs, player lineage, and roster analytics using 20,000+ player records and commercial data.</pre>
+        </article>
+      </section>
+
+      <section class="callout">
+        <strong>What this shows:</strong> applied workflow design, local data handling, document generation, and a
+        system-minded approach to reducing repetitive work.
+      </section>
+    </main>
+  </body>
+</html>

@@ -510,6 +510,140 @@ a.button {
   margin-top: 26px;
 }
 
+.subpage-shell {
+  width: min(calc(100% - 32px), 1040px);
+  margin: 0 auto;
+  padding: 24px 0 72px;
+}
+
+.page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.project-hero-panel,
+.project-panel,
+.route-card,
+.sample-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.project-hero-panel {
+  padding: 32px;
+  border-radius: var(--radius-xl);
+}
+
+.project-hero-panel h1 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meta-strip li,
+.project-status {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(11, 22, 40, 0.78);
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.project-status {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: var(--secondary);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.project-grid,
+.route-grid,
+.sample-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.project-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.route-grid,
+.sample-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-panel,
+.route-card,
+.sample-card {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+}
+
+.project-panel h2,
+.route-card h3,
+.sample-card h3 {
+  margin: 0 0 12px;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.project-panel p,
+.project-panel li,
+.route-card p,
+.sample-card p {
+  color: var(--muted);
+}
+
+.list-tight {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.list-tight li {
+  margin-bottom: 10px;
+}
+
+.callout {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(204, 48, 72, 0.2);
+  background: rgba(204, 48, 72, 0.08);
+}
+
+.text-sample {
+  margin: 0;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: rgba(8, 17, 31, 0.9);
+  color: #d9e6fb;
+  white-space: pre-wrap;
+  font: 0.92rem/1.55 "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
 .modal[hidden] {
   display: none;
 }
@@ -607,7 +741,10 @@ body.modal-open {
   .compact-grid,
   .experience-grid,
   .skills-grid,
-  .detail-grid {
+  .detail-grid,
+  .project-grid,
+  .route-grid,
+  .sample-grid {
     grid-template-columns: 1fr;
   }
 

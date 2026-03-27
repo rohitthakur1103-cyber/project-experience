@@ -63,6 +63,7 @@ const technicalProjects = [
       "Stores shortlist state in SQLite and supports a daily review workflow.",
       "Includes a local dashboard for moving jobs from discovery to application tracking."
     ],
+    projectHref: "projects/job-agent.html",
     localHref: "http://127.0.0.1:8012/",
     publicNote: "Local interactive demo available. Public deployment for this app is not live yet."
   },
@@ -76,6 +77,7 @@ const technicalProjects = [
       "Includes ranked coach boards, comparison tools, and executive brief workflows.",
       "Designed for front-office review rather than match-day analysis."
     ],
+    projectHref: "projects/coaching-decision-research.html",
     localHref: "http://127.0.0.1:8011/index.html",
     publicHref: "https://github.com/rohitthakur1103-cyber/usl-coach-dashboard",
     publicLabel: "Open repository"
@@ -90,6 +92,7 @@ const technicalProjects = [
       "Supports marketing segmentation, campaign planning, and audience exports.",
       "Built as a CRM layer on top of existing business systems rather than a full POS replacement."
     ],
+    projectHref: "projects/seaview-crm.html",
     publicHref: "https://seaview-crm.onrender.com",
     publicLabel: "Open live app"
   }
@@ -177,7 +180,12 @@ const closeButton = document.querySelector(".modal-close");
 const isLocalPreview = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
 
 function buildTechnicalProjectLinks(build) {
-  const links = [];
+  const links = [
+    {
+      label: "View project page",
+      href: build.projectHref
+    }
+  ];
 
   if (build.publicHref) {
     links.push({
@@ -242,7 +250,7 @@ function renderTechnicalProjects() {
             links.length
               ? `<div class="card-actions">${links
                   .map((link) =>
-                    `<a class="button button--ghost" href="${link.href}" target="_blank" rel="noreferrer">${link.label}</a>`
+                    `<a class="button button--ghost" href="${link.href}" ${link.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${link.label}</a>`
                   )
                   .join("")}</div>`
               : ""
