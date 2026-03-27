@@ -330,14 +330,16 @@ a.button {
 
 .compact-grid,
 .experience-grid,
-.skills-grid {
+.skills-grid,
+.roles-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .case-card,
 .mini-card,
 .experience-card,
-.skill-card {
+.skill-card,
+.role-card {
   position: relative;
   overflow: hidden;
   padding: 24px;
@@ -351,6 +353,7 @@ a.button {
 .mini-card::before,
 .experience-card::before,
 .skill-card::before,
+.role-card::before,
 .contact-card::before {
   content: "";
   position: absolute;
@@ -366,7 +369,8 @@ a.button {
 .case-card:nth-child(2n)::before,
 .mini-card:nth-child(2n)::before,
 .experience-card:nth-child(2n)::before,
-.skill-card:nth-child(2n)::before {
+.skill-card:nth-child(2n)::before,
+.role-card:nth-child(2n)::before {
   background: linear-gradient(90deg, rgba(109, 181, 255, 0.92), rgba(204, 48, 72, 0.92), transparent 74%);
 }
 
@@ -404,7 +408,8 @@ a.button {
 .case-card h3,
 .mini-card h3,
 .experience-card h3,
-.skill-card h3 {
+.skill-card h3,
+.role-card h3 {
   margin: 0;
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 1.55rem;
@@ -414,7 +419,8 @@ a.button {
 .case-summary,
 .mini-card p,
 .experience-field,
-.skill-card p {
+.skill-card p,
+.role-card p {
   color: var(--muted);
 }
 
@@ -501,7 +507,13 @@ a.button {
   gap: 18px;
 }
 
-.skill-card p {
+.roles-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.skill-card p,
+.role-card p {
   margin: 14px 0 18px;
 }
 
@@ -757,6 +769,7 @@ body.modal-open {
   .compact-grid,
   .experience-grid,
   .skills-grid,
+  .roles-grid,
   .detail-grid,
   .project-grid,
   .route-grid,

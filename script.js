@@ -194,9 +194,81 @@ const skillGroups = [
   }
 ];
 
+const roleGroups = [
+  {
+    title: "Strongest Fit",
+    description:
+      "Roles most directly supported by the business intelligence, reporting, dashboard, and analytics work across the portfolio.",
+    chips: [
+      "Business Intelligence Analyst",
+      "Data Analyst",
+      "Reporting Analyst",
+      "Analytics Analyst",
+      "Business Analyst",
+      "Operations Analyst",
+      "Insights Analyst",
+      "Decision Support Analyst",
+      "Data Visualization Analyst",
+      "Tableau Analyst"
+    ]
+  },
+  {
+    title: "Business Systems & Operations",
+    description:
+      "Roles tied to CRM, ticketing, workflow, internal tooling, and system-driven business operations.",
+    chips: [
+      "CRM Analyst",
+      "Revenue Operations Analyst",
+      "Sales Operations Analyst",
+      "Business Systems Analyst",
+      "Systems Analyst",
+      "Process Improvement Analyst",
+      "Solutions Analyst",
+      "Implementation Analyst",
+      "Operations Coordinator",
+      "Internal Tools Analyst"
+    ]
+  },
+  {
+    title: "Sports & Research",
+    description:
+      "Roles supported by the league analysis, scouting, pathway, and executive sports decision-support work.",
+    chips: [
+      "Sporting Data Analyst",
+      "Scouting Analyst",
+      "Performance Analyst",
+      "Player Recruitment Analyst",
+      "Soccer Operations Analyst",
+      "Research Analyst",
+      "Strategy Analyst",
+      "Talent Identification Analyst",
+      "Roster Analyst",
+      "Front Office Analyst"
+    ]
+  },
+  {
+    title: "Technical & Product-Adjacent",
+    description:
+      "Adjacent roles supported by software, automation, SharePoint, dashboard, and prototype work.",
+    chips: [
+      "Junior Software Engineer",
+      "Technical Analyst",
+      "Product Analyst",
+      "Automation Analyst",
+      "SharePoint Developer",
+      "Application Support Analyst",
+      "QA / Test Analyst",
+      "Technical Project Analyst",
+      "Product Operations Analyst",
+      "Platform Operations Analyst"
+    ]
+  }
+];
+
 const featuredGrid = document.querySelector("#featured-grid");
 const technicalGrid = document.querySelector("#technical-grid");
 const experienceGrid = document.querySelector("#experience-grid");
+const rolesGrid = document.querySelector("#roles-grid");
 const skillsGrid = document.querySelector("#skills-grid");
 const modal = document.querySelector("#project-modal");
 const modalContent = document.querySelector("#modal-content");
@@ -309,6 +381,25 @@ function renderSkills() {
         <article class="skill-card reveal" style="--delay:${index * 80}ms">
           <div class="skill-topline">
             <span class="badge">Method set</span>
+          </div>
+          <h3>${group.title}</h3>
+          <p>${group.description}</p>
+          <div class="skill-chips">
+            ${group.chips.map((chip) => `<span class="chip">${chip}</span>`).join("")}
+          </div>
+        </article>
+      `
+    )
+    .join("");
+}
+
+function renderRoles() {
+  rolesGrid.innerHTML = roleGroups
+    .map(
+      (group, index) => `
+        <article class="role-card reveal" style="--delay:${index * 80}ms">
+          <div class="skill-topline">
+            <span class="badge">Role cluster</span>
           </div>
           <h3>${group.title}</h3>
           <p>${group.description}</p>
@@ -485,6 +576,7 @@ function setupReveal() {
 renderFeaturedProjects();
 renderTechnicalProjects();
 renderExperienceHighlights();
+renderRoles();
 renderSkills();
 setupTabs();
 setupInteractions();
