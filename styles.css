@@ -49,7 +49,7 @@ body::before {
     linear-gradient(90deg, rgba(109, 181, 255, 0.05) 1px, transparent 1px);
   background-size: 64px 64px;
   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 85%);
-  opacity: 0.28;
+  opacity: 0.16;
 }
 
 a {
@@ -72,14 +72,14 @@ a.button {
 
 .topbar {
   position: sticky;
-  top: 12px;
+  top: 10px;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 18px;
   margin-top: 12px;
-  padding: 14px 18px;
+  padding: 13px 18px;
   background: rgba(7, 16, 29, 0.9);
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -97,7 +97,7 @@ a.button {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
   justify-content: flex-end;
 }
 
@@ -180,8 +180,8 @@ a.button {
 }
 
 .hero h1 {
-  max-width: 14ch;
-  font-size: clamp(2.7rem, 5.4vw, 4.9rem);
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
 }
 
 .hero-text,
@@ -266,9 +266,36 @@ a.button {
 .hero-panel {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   padding: 28px;
   border-radius: var(--radius-xl);
+}
+
+.profile-summary {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(11, 22, 40, 0.72);
+}
+
+.profile-line {
+  display: grid;
+  gap: 4px;
+}
+
+.profile-label {
+  color: var(--secondary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.profile-value {
+  color: var(--ink);
+  font-size: 0.98rem;
 }
 
 .panel-label {
@@ -284,7 +311,7 @@ a.button {
 }
 
 .metric-card {
-  padding: 18px;
+  padding: 16px;
   border-radius: var(--radius-md);
   background:
     linear-gradient(145deg, rgba(15, 29, 52, 0.95), rgba(11, 22, 40, 0.92));
@@ -303,6 +330,21 @@ a.button {
   margin-top: 8px;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.fit-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fit-strip span {
+  padding: 8px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(109, 181, 255, 0.08);
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .section-heading {
@@ -374,6 +416,17 @@ a.button {
   border: 1px solid var(--line);
   background: var(--surface-strong);
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.case-card:hover,
+.mini-card:hover,
+.experience-card:hover,
+.skill-card:hover,
+.role-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(114, 151, 214, 0.28);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.24);
 }
 
 .case-card::before,
@@ -449,6 +502,12 @@ a.button {
 .skill-card p,
 .role-card p {
   color: var(--muted);
+}
+
+.mini-card p,
+.skill-card p,
+.role-card p {
+  line-height: 1.62;
 }
 
 .project-note {
@@ -811,7 +870,7 @@ body.modal-open {
   }
 
   .hero h1 {
-    max-width: 14ch;
+    max-width: 13ch;
   }
 }
 
@@ -829,7 +888,7 @@ body.modal-open {
     gap: 10px 14px;
   }
 
-  .nav a {
+  .nav-tab {
     font-size: 0.88rem;
   }
 

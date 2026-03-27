@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rohit Thakur | Project Experience Hub</title>
+    <title>Rohit Thakur | Portfolio</title>
     <meta
       name="description"
-      content="A single-page portfolio site for Rohit Thakur's featured projects, technical work, and experience highlights."
+      content="Portfolio site for Rohit Thakur featuring analytics, business intelligence, technical projects, and experience highlights."
     >
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -18,7 +18,7 @@
           <button class="nav-tab is-active" id="tab-selected-work" type="button" role="tab" aria-selected="true" aria-controls="selected-work" data-tab-target="selected-work">Selected Work</button>
           <button class="nav-tab" id="tab-technical-projects" type="button" role="tab" aria-selected="false" aria-controls="technical-projects" data-tab-target="technical-projects">Technical Projects</button>
           <button class="nav-tab" id="tab-experience" type="button" role="tab" aria-selected="false" aria-controls="experience" data-tab-target="experience">Experience</button>
-          <button class="nav-tab" id="tab-role-fit" type="button" role="tab" aria-selected="false" aria-controls="role-fit" data-tab-target="role-fit">Role Fit</button>
+          <button class="nav-tab" id="tab-role-fit" type="button" role="tab" aria-selected="false" aria-controls="role-fit" data-tab-target="role-fit">Target Roles</button>
           <button class="nav-tab" id="tab-skills" type="button" role="tab" aria-selected="false" aria-controls="skills" data-tab-target="skills">Skills</button>
           <button class="nav-tab" id="tab-contact" type="button" role="tab" aria-selected="false" aria-controls="contact" data-tab-target="contact">Contact</button>
         </nav>
@@ -27,26 +27,36 @@
       <main id="home">
         <section class="hero section">
           <div class="hero-copy reveal">
-            <p class="section-kicker">Work Portfolio</p>
-            <h1>A direct view of my projects, technical work, and experience.</h1>
+            <p class="section-kicker">Portfolio</p>
+            <h1>Analytics, business intelligence, and technical project work in one place.</h1>
             <p class="hero-text">
-              This site brings my work into one place so it is easy to review. It covers featured projects,
-              supporting technical work, and experience that adds context to how I approach problems.
+              This portfolio is built for quick review. It brings together selected case studies, applied technical
+              projects, and experience across sports, business systems, and reporting so the work is easy to assess.
             </p>
             <div class="hero-actions">
-              <button class="button button--primary" type="button" data-tab-target="selected-work">View selected work</button>
+              <button class="button button--primary" type="button" data-tab-target="selected-work">Review featured work</button>
               <a class="button button--ghost" href="assets/documents/rohit-thakur-resume.pdf" target="_blank" rel="noreferrer">Open resume</a>
             </div>
             <ul class="hero-tags">
-              <li>Analytics</li>
-              <li>Software</li>
-              <li>Business systems</li>
-              <li>Presentation-ready work</li>
+              <li>Business intelligence</li>
+              <li>Data analysis</li>
+              <li>Technical projects</li>
+              <li>Executive-ready reporting</li>
             </ul>
           </div>
 
           <aside class="hero-panel reveal">
-            <div class="panel-label">Overview</div>
+            <div class="panel-label">Quick Read</div>
+            <div class="profile-summary">
+              <div class="profile-line">
+                <span class="profile-label">Primary fit</span>
+                <span class="profile-value">BI, analytics, reporting, and operations-focused roles</span>
+              </div>
+              <div class="profile-line">
+                <span class="profile-label">Domain strength</span>
+                <span class="profile-value">Sports, commercial reporting, ticketing, and internal tools</span>
+              </div>
+            </div>
             <div class="metric-grid">
               <article class="metric-card">
                 <span class="metric-value">38</span>
@@ -65,9 +75,15 @@
                 <span class="metric-label">executive-ready reports</span>
               </article>
             </div>
+            <div class="fit-strip">
+              <span>Business Intelligence Analyst</span>
+              <span>Data Analyst</span>
+              <span>Business Analyst</span>
+              <span>Revenue / Operations Analyst</span>
+            </div>
             <div class="panel-note">
-              Start with the featured work, then use the technical projects and experience sections for a fuller
-              picture of the way I build, analyze, and communicate.
+              Start with featured work, then use the technical and experience sections to review how I structure
+              analysis, reporting, and systems work.
             </div>
           </aside>
         </section>
@@ -77,8 +93,8 @@
             <p class="section-kicker">Selected Work</p>
             <h2>Selected work</h2>
             <p>
-              Each project starts with the essentials and opens into a deeper case-study view where more context is
-              useful.
+              The strongest examples are first. Each project gives the problem, the work, the tools, and the result
+              in a format that is easy to skim.
             </p>
           </div>
           <div id="featured-grid" class="card-grid featured-grid"></div>
@@ -89,8 +105,8 @@
             <p class="section-kicker">Technical Projects</p>
             <h2>Technical projects</h2>
             <p>
-              This section separates application work from Tableau dashboard work so the portfolio stays easier to
-              review.
+              These projects show applied range beyond the main case studies, with live demos where available and
+              summary pages where the work is older or internal.
             </p>
           </div>
           <div class="section-subgroup reveal">
@@ -120,8 +136,8 @@
             <p class="section-kicker">Experience Highlights</p>
             <h2>Experience</h2>
             <p>
-              Not every strong experience has a finished artifact. These cards keep the context clear by focusing on
-              the problem, the work, the tools, and the result.
+              These roles add context behind the project work and show how the analysis, reporting, and systems work
+              was applied in real settings.
             </p>
           </div>
           <div id="experience-grid" class="card-grid experience-grid"></div>
@@ -129,11 +145,11 @@
 
         <section id="role-fit" class="section tab-panel" role="tabpanel" aria-labelledby="tab-role-fit" hidden>
           <div class="section-heading reveal">
-            <p class="section-kicker">Role Fit</p>
-            <h2>Roles supported by my experience</h2>
+            <p class="section-kicker">Target Roles</p>
+            <h2>Roles that align most directly with this work</h2>
             <p>
-              This is a broad first-pass list based on the work shown across the portfolio. It is meant to surface
-              realistic directions first, then narrow the list based on the roles I want to target most.
+              This is a narrower recruiter-facing view of where my experience fits best based on the work shown
+              across the portfolio.
             </p>
           </div>
           <div id="roles-grid" class="roles-grid"></div>
@@ -144,7 +160,7 @@
             <p class="section-kicker">Skills &amp; Methods</p>
             <h2>Core tools and working modes</h2>
             <p>
-              This is curated to match the work on the page, not just to mirror a resume list.
+              This section is limited to the tools and methods that appear repeatedly in the work on this page.
             </p>
           </div>
           <div id="skills-grid" class="skills-grid"></div>
@@ -153,10 +169,10 @@
         <section id="contact" class="section contact-section tab-panel reveal" role="tabpanel" aria-labelledby="tab-contact" hidden>
           <div class="contact-card">
             <p class="section-kicker">Contact</p>
-            <h2>Contact</h2>
+            <h2>Resume and contact</h2>
             <p>
-              The page includes direct links to uploaded artifacts and supporting material, and it is built to grow
-              as I add more work over time.
+              The fastest way to review the portfolio is through the selected work and technical project sections,
+              with the resume available here for a shorter summary.
             </p>
             <div class="contact-actions">
               <a class="button button--primary" href="mailto:rt4362@uncw.edu">rt4362@uncw.edu</a>

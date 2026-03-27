@@ -6,7 +6,7 @@ const featuredProjects = [
     status: "Artifact ready",
     statusClass: "",
     summary:
-      "A season-wide analytics project focused on extracting useful signals from large sports datasets and turning them into clear, usable findings.",
+      "A season-wide analytics case study that turns raw league data into structured scouting and player-pathway insight.",
     metrics: ["850+ matches", "4,500+ players", "SQL + Python"],
     problem:
       "Scouting and pathway decisions were sitting inside raw league data, which made it difficult to compare impact across players, teams, and different points in the season.",
@@ -32,8 +32,8 @@ const featuredProjects = [
     status: "Case study",
     statusClass: "status-secondary",
     summary:
-      "A Tableau revenue-planning project focused on modeling partnership targets across multiple years and breaking those targets across sponsorship asset categories.",
-    metrics: ["Tableau workbook", "4-year model", "Revenue planning"],
+      "A commercial planning case study built in Tableau to model multi-year partnership targets and asset-level revenue mix.",
+    metrics: ["Tableau", "4-year model", "Revenue planning"],
     problem:
       "Commercial target setting gets harder when the growth assumptions, year-by-year path, and sponsorship asset mix all live in separate spreadsheets or conversations. The goal was to turn that logic into one adjustable planning model.",
     approach: [
@@ -54,12 +54,12 @@ const featuredProjects = [
   {
     id: "project-experience",
     eyebrow: "Featured project",
-    title: "Project Experience",
+    title: "Project Documentation Case Study",
     status: "Artifact attached",
     statusClass: "status-secondary",
     summary:
-      "A second featured project backed by an uploaded PDF, included here so the work and artifact can be reviewed in the same place.",
-    metrics: ["PDF artifact", "Case-study slot", "Presentation-ready"],
+      "A documented project included as a reviewable case-study slot so the work can be assessed without digging through separate files.",
+    metrics: ["PDF artifact", "Case study", "Supporting documentation"],
     problem:
       "The project already has documentation behind it, but the story still needs a quicker portfolio layer so people can understand the challenge, your role, and the result at a glance.",
     approach: [
@@ -84,7 +84,7 @@ const technicalProjects = [
     badge: "Application project",
     status: "In progress",
     summary:
-      "A local job discovery and application workflow that centralizes search, filtering, shortlist generation, and application tracking in one system.",
+      "A local workflow for job discovery, filtering, shortlist generation, and application tracking in one system.",
     prompts: [
       "Normalizes jobs from multiple sources into one schema.",
       "Stores shortlist state in SQLite and supports a daily review workflow.",
@@ -92,14 +92,14 @@ const technicalProjects = [
     ],
     projectHref: "projects/job-agent.html",
     localHref: "http://127.0.0.1:8012/",
-    publicNote: "This project currently uses a curated portfolio page while the public demo is still being developed."
+    publicNote: "This project is currently represented by a curated project page while the public demo is still being developed."
   },
   {
     title: "Coaching Decision Research Dashboard",
     badge: "Application project",
     status: "Interactive dashboard",
     summary:
-      "A multi-page executive decision dashboard built from coach data to support retention, transition, hiring, and comparison decisions.",
+      "A multi-page executive dashboard built from coach data to support retention, transition, hiring, and comparison decisions.",
     prompts: [
       "Transforms workbook data into browser-ready decision support views.",
       "Includes ranked coach boards, comparison tools, and executive brief workflows.",
@@ -123,7 +123,7 @@ const technicalProjects = [
     badge: "Application project",
     status: "Live demo",
     summary:
-      "A lightweight internal CRM and marketing operations system designed to unify fragmented customer records and support repeatable weekly outreach.",
+      "A lightweight CRM and marketing operations system designed to unify customer records and support repeatable outreach.",
     prompts: [
       "Centralizes customer records, purchases, touchpoints, and import flows in SQLite.",
       "Supports marketing segmentation, campaign planning, and audience exports.",
@@ -285,7 +285,7 @@ const tableauProjects = [
 const experienceHighlights = [
   {
     title: "Business Intelligence Analyst, USL",
-    period: "Recent internship experience",
+    period: "Internship experience",
     problem:
       "League, CRM, ticketing, and commercial datasets needed to be turned into reporting that leadership could actually use for operational and business decisions.",
     did:
@@ -333,15 +333,15 @@ const experienceHighlights = [
   },
   {
     title: "Athlete-to-Analyst Perspective",
-    period: "Long-term background",
+    period: "Background context",
     problem:
-      "Domain expertise matters when presenting sports analytics and player pathway work, and that context should be visible instead of assumed.",
+      "Domain knowledge matters when presenting sports analytics and player pathway work, and that context should be visible instead of assumed.",
     did:
       "Signed a professional contract at 16 with North Carolina FC, made a professional debut at 17, and later competed as an NCAA Division I student-athlete at UNC Chapel Hill and UNC Wilmington.",
     tools:
       "High-performance environments, leadership, communication, player perspective",
     changed:
-      "Adds lived credibility to the scouting, development, and performance-analysis work shown elsewhere on the page."
+      "Adds subject-matter credibility to the sports, scouting, and performance work shown elsewhere in the portfolio."
   }
 ];
 
@@ -368,26 +368,22 @@ const skillGroups = [
 
 const roleGroups = [
   {
-    title: "Strongest Fit",
+    title: "Primary Fit",
     description:
-      "Roles most directly supported by the business intelligence, reporting, dashboard, and analytics work across the portfolio.",
+      "The clearest matches based on the business intelligence, reporting, dashboard, and analytics work shown here.",
     chips: [
       "Business Intelligence Analyst",
       "Data Analyst",
       "Reporting Analyst",
       "Analytics Analyst",
       "Business Analyst",
-      "Operations Analyst",
-      "Insights Analyst",
-      "Decision Support Analyst",
-      "Data Visualization Analyst",
-      "Tableau Analyst"
+      "Operations Analyst"
     ]
   },
   {
-    title: "Business Systems & Operations",
+    title: "Operations & Systems",
     description:
-      "Roles tied to CRM, ticketing, workflow, internal tooling, and system-driven business operations.",
+      "Good adjacent fits tied to CRM, ticketing, workflow, and internal tools.",
     chips: [
       "CRM Analyst",
       "Revenue Operations Analyst",
@@ -395,33 +391,26 @@ const roleGroups = [
       "Business Systems Analyst",
       "Systems Analyst",
       "Process Improvement Analyst",
-      "Solutions Analyst",
-      "Implementation Analyst",
-      "Operations Coordinator",
-      "Internal Tools Analyst"
+      "Implementation Analyst"
     ]
   },
   {
     title: "Commercial & Revenue",
     description:
-      "Roles supported by revenue-planning, partnership modeling, and commercial reporting work shown across the portfolio.",
+      "Commercial roles supported by the revenue-planning, partnership, ticketing, and reporting work on the page.",
     chips: [
       "Revenue Analyst",
       "Commercial Analyst",
       "Corporate Partnerships Analyst",
       "Sponsorship Analyst",
       "Revenue Planning Analyst",
-      "Sales Strategy Analyst",
-      "Commercial Operations Analyst",
-      "Partnership Strategy Analyst",
-      "Business Development Analyst",
-      "Revenue Operations Analyst"
+      "Commercial Operations Analyst"
     ]
   },
   {
-    title: "Sports & Research",
+    title: "Sports Analytics",
     description:
-      "Roles supported by the league analysis, scouting, pathway, and executive sports decision-support work.",
+      "Sports-specific roles supported by league analysis, pathway work, scouting context, and decision-support reporting.",
     chips: [
       "Sporting Data Analyst",
       "Scouting Analyst",
@@ -429,27 +418,7 @@ const roleGroups = [
       "Player Recruitment Analyst",
       "Soccer Operations Analyst",
       "Research Analyst",
-      "Strategy Analyst",
-      "Talent Identification Analyst",
-      "Roster Analyst",
-      "Front Office Analyst"
-    ]
-  },
-  {
-    title: "Technical & Product-Adjacent",
-    description:
-      "Adjacent roles supported by software, automation, SharePoint, dashboard, and prototype work.",
-    chips: [
-      "Junior Software Engineer",
-      "Technical Analyst",
-      "Product Analyst",
-      "Automation Analyst",
-      "SharePoint Developer",
-      "Application Support Analyst",
-      "QA / Test Analyst",
-      "Technical Project Analyst",
-      "Product Operations Analyst",
-      "Platform Operations Analyst"
+      "Talent Identification Analyst"
     ]
   }
 ];
