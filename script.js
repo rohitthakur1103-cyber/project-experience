@@ -26,6 +26,34 @@ const featuredProjects = [
     artifactHref: "assets/documents/usl-league-wide-analysis.pptx"
   },
   {
+    id: "corporate-partnerships-target-revenue",
+    eyebrow: "Featured project",
+    title: "Corporate Partnerships Target Revenue",
+    status: "Workbook + case study",
+    statusClass: "status-secondary",
+    summary:
+      "A Tableau revenue-planning workbook for modeling partnership targets across multiple years and breaking those targets across sponsorship asset categories.",
+    metrics: ["Tableau workbook", "4-year model", "Revenue planning"],
+    problem:
+      "Commercial target setting gets harder when the growth assumptions, year-by-year path, and sponsorship asset mix all live in separate spreadsheets or conversations. The goal was to turn that logic into one adjustable planning model.",
+    approach: [
+      "Built the workbook around changeable inputs for start year, planning horizon, annual growth, and first-year target.",
+      "Used calculated fields to translate those assumptions into year-by-year revenue targets.",
+      "Mapped the target across asset groups like stadium branding, kit branding, broadcast inventory, digital inventory, entitlements, in-game activations, and print.",
+      "Structured the workbook so the planning logic can be reviewed quickly instead of recalculated manually."
+    ],
+    tools: ["Tableau", "Excel", "Revenue planning", "Scenario modeling", "Business intelligence"],
+    changed: [
+      "Creates a clearer way to present a multi-year partnership revenue path.",
+      "Makes the asset mix behind the target explicit instead of implied.",
+      "Supports commercial review, packaging discussions, and executive conversations with a cleaner planning artifact."
+    ],
+    artifactLabel: "View project page",
+    artifactHref: "projects/corporate-partnerships-target-revenue.html",
+    downloadLabel: "Download workbook",
+    downloadHref: "assets/documents/corporate-partnerships-target-revenue.twb"
+  },
+  {
     id: "project-experience",
     eyebrow: "Featured project",
     title: "Project Experience",
@@ -178,7 +206,7 @@ const skillGroups = [
     title: "Analytics Stack",
     description:
       "The tools behind the sports and decision-support work on the page.",
-    chips: ["SQL", "Python", "Excel", "Tableau", "Power BI", "Dashboards", "Reporting", "Trend analysis"]
+    chips: ["SQL", "Python", "Excel", "Tableau", "Power BI", "Dashboards", "Reporting", "Trend analysis", "Forecasting", "Scenario modeling"]
   },
   {
     title: "Software & Web",
@@ -190,7 +218,7 @@ const skillGroups = [
     title: "Business & Delivery",
     description:
       "How the work gets turned into something a stakeholder can actually use.",
-    chips: ["Executive reporting", "KPI framing", "CRM analysis", "Ticketing analysis", "Presentation design", "Client delivery", "Live walkthroughs"]
+    chips: ["Executive reporting", "KPI framing", "CRM analysis", "Ticketing analysis", "Revenue planning", "Commercial reporting", "Presentation design", "Client delivery", "Live walkthroughs"]
   }
 ];
 
@@ -227,6 +255,23 @@ const roleGroups = [
       "Implementation Analyst",
       "Operations Coordinator",
       "Internal Tools Analyst"
+    ]
+  },
+  {
+    title: "Commercial & Revenue",
+    description:
+      "Roles supported by revenue-planning, partnership modeling, and commercial reporting work shown across the portfolio.",
+    chips: [
+      "Revenue Analyst",
+      "Commercial Analyst",
+      "Corporate Partnerships Analyst",
+      "Sponsorship Analyst",
+      "Revenue Planning Analyst",
+      "Sales Strategy Analyst",
+      "Commercial Operations Analyst",
+      "Partnership Strategy Analyst",
+      "Business Development Analyst",
+      "Revenue Operations Analyst"
     ]
   },
   {
@@ -508,6 +553,11 @@ function renderModal(project) {
     </div>
     <div class="detail-footer">
       <a class="button button--primary" href="${project.artifactHref}" target="_blank" rel="noreferrer">${project.artifactLabel}</a>
+      ${
+        project.downloadHref
+          ? `<a class="button button--ghost" href="${project.downloadHref}" target="_blank" rel="noreferrer">${project.downloadLabel}</a>`
+          : ""
+      }
     </div>
   `;
 }
