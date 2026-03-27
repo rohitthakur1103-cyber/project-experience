@@ -112,6 +112,18 @@ const technicalProjects = [
 
 const experienceHighlights = [
   {
+    title: "Business Intelligence Analyst, USL",
+    period: "Recent internship experience",
+    problem:
+      "League, CRM, ticketing, and commercial datasets needed to be turned into reporting that leadership could actually use for operational and business decisions.",
+    did:
+      "Built Tableau dashboards across league KPIs, player lineage, and roster analytics using 20,000+ player records and commercial data. Conducted SQL and Excel analysis on CRM, ticketing, and consumer datasets, and produced executive-ready reporting tied to operational and commercial questions.",
+    tools:
+      "Tableau, SQL, Excel, dashboard design, KPI reporting, CRM and ticketing analysis",
+    changed:
+      "Turned large datasets into business intelligence outputs that supported pricing, investment, reporting, and stakeholder decision-making."
+  },
+  {
     title: "USL Men's Soccer Pathway Analyst",
     period: "May 2025 - Present",
     problem:
@@ -166,7 +178,7 @@ const skillGroups = [
     title: "Analytics Stack",
     description:
       "The tools behind the sports and decision-support work on the page.",
-    chips: ["SQL", "Python", "Excel", "Dashboards", "Reporting", "Trend analysis"]
+    chips: ["SQL", "Python", "Excel", "Tableau", "Power BI", "Dashboards", "Reporting", "Trend analysis"]
   },
   {
     title: "Software & Web",
@@ -175,10 +187,10 @@ const skillGroups = [
     chips: ["Java", "JavaScript", "C", "C#", "MySQL", "HTML/CSS", "SharePoint"]
   },
   {
-    title: "Delivery & Communication",
+    title: "Business & Delivery",
     description:
       "How the work gets turned into something a stakeholder can actually use.",
-    chips: ["Presentation design", "Scouting narratives", "Client delivery", "Testing", "Troubleshooting", "Live walkthroughs"]
+    chips: ["Executive reporting", "KPI framing", "CRM analysis", "Ticketing analysis", "Presentation design", "Client delivery", "Live walkthroughs"]
   }
 ];
 
