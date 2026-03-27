@@ -319,6 +319,33 @@ a.button {
   margin: 16px 0 0;
 }
 
+.section-subgroup + .section-subgroup {
+  margin-top: 34px;
+}
+
+.subsection-heading {
+  max-width: 54rem;
+  margin-bottom: 18px;
+}
+
+.subsection-heading h3 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.7rem;
+}
+
+.subsection-heading p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.subsection-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
 .card-grid {
   display: grid;
   gap: 18px;
@@ -609,6 +636,12 @@ a.button {
 .project-grid,
 .route-grid,
 .sample-grid {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.project-stack {
   display: grid;
   gap: 18px;
   margin-top: 24px;

@@ -29,10 +29,10 @@ const featuredProjects = [
     id: "corporate-partnerships-target-revenue",
     eyebrow: "Featured project",
     title: "Corporate Partnerships Target Revenue",
-    status: "Workbook + case study",
+    status: "Case study",
     statusClass: "status-secondary",
     summary:
-      "A Tableau revenue-planning workbook for modeling partnership targets across multiple years and breaking those targets across sponsorship asset categories.",
+      "A Tableau revenue-planning project focused on modeling partnership targets across multiple years and breaking those targets across sponsorship asset categories.",
     metrics: ["Tableau workbook", "4-year model", "Revenue planning"],
     problem:
       "Commercial target setting gets harder when the growth assumptions, year-by-year path, and sponsorship asset mix all live in separate spreadsheets or conversations. The goal was to turn that logic into one adjustable planning model.",
@@ -49,9 +49,7 @@ const featuredProjects = [
       "Supports commercial review, packaging discussions, and executive conversations with a cleaner planning artifact."
     ],
     artifactLabel: "View project page",
-    artifactHref: "projects/corporate-partnerships-target-revenue.html",
-    downloadLabel: "Download workbook",
-    downloadHref: "assets/documents/corporate-partnerships-target-revenue.twb"
+    artifactHref: "projects/corporate-partnerships-target-revenue.html"
   },
   {
     id: "project-experience",
@@ -83,6 +81,7 @@ const featuredProjects = [
 const technicalProjects = [
   {
     title: "Job Agent",
+    badge: "Application project",
     status: "In progress",
     summary:
       "A local job discovery and application workflow that centralizes search, filtering, shortlist generation, and application tracking in one system.",
@@ -97,6 +96,7 @@ const technicalProjects = [
   },
   {
     title: "Coaching Decision Research Dashboard",
+    badge: "Application project",
     status: "Interactive dashboard",
     summary:
       "A multi-page executive decision dashboard built from coach data to support retention, transition, hiring, and comparison decisions.",
@@ -120,6 +120,7 @@ const technicalProjects = [
   },
   {
     title: "Seaview Crabshack CRM System",
+    badge: "Application project",
     status: "Live demo",
     summary:
       "A lightweight internal CRM and marketing operations system designed to unify fragmented customer records and support repeatable weekly outreach.",
@@ -135,6 +136,149 @@ const technicalProjects = [
         href: "https://seaview-crm.onrender.com"
       }
     ]
+  }
+];
+
+const tableauProjects = [
+  {
+    title: "Player Lineage - Super & W-League",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A player-pathway dashboard that organizes lineage and movement patterns across the Super and W-League ecosystem.",
+    prompts: [
+      "Built to make player backgrounds and pathway movement easier to review in one place.",
+      "Included overview and bar-chart views for cleaner comparison across groups.",
+      "Framed player lineage as a decision-support problem rather than a flat worksheet."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#player-lineage",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Championship Points and Playoff Projections",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A standings and playoff-projection dashboard for tracking the Championship table through multiple seasonal update drafts.",
+    prompts: [
+      "Used Tableau to structure team-by-team projection views instead of relying on a static table.",
+      "Iterated through multiple drafts as the presentation format improved.",
+      "Focused on making league-position and playoff-path scenarios easier to review."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#championship-points",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "League One Points and Playoff Projections",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A League One version of the projection workflow, built to organize standings movement and playoff positioning in dashboard form.",
+    prompts: [
+      "Translated league table movement into a cleaner projection interface.",
+      "Supported quick review of team placement and postseason context.",
+      "Extended the same projection logic into a second competition environment."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#league-one-points",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Super League Points and Playoff Projections",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A Super League projection project that combined performance context with match-day ticketing and revenue views.",
+    prompts: [
+      "Included sporting views like home-away splits, head-to-head context, and points-per-game.",
+      "Also surfaced business-side measures such as average ticket price, capacity utilization, and match revenue.",
+      "Connected on-field projection work with match-day commercial context."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#super-league-points",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Playoff Match Projections - Championship",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A match-level playoff projection workflow focused on individual postseason scenarios rather than only table-level outcomes.",
+    prompts: [
+      "Separated playoff matchup modeling from broader season-table projections.",
+      "Built for scenario review at the match and bracket level.",
+      "Extended the projection work beyond standings summaries into playoff decision support."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#playoff-match-projections",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Club Performance & Support Survey",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A survey-driven dashboard for reviewing club priorities, support needs, sponsorship counts, and sponsorship value in one place.",
+    prompts: [
+      "Combined survey responses with commercial-support views instead of leaving them in raw response tables.",
+      "Included views around operations priorities, support focus, sponsorship counts, and total sponsorship value.",
+      "Turned qualitative and commercial inputs into a cleaner review format."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#club-performance-support",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Ticketing Revenue Modeling",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A ticketing modeling project built around parameter, table, summary, and dashboard views for evaluating revenue scenarios.",
+    prompts: [
+      "Structured the work so ticketing assumptions could be adjusted in one model.",
+      "Produced table and summary views alongside a presentation-ready dashboard layer.",
+      "Framed ticketing revenue as a scenario-planning problem rather than a one-off report."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#ticketing-revenue-modeling",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Revenue Streams Dashboard",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A commercial dashboard focused on revenue streams, related revenue effects, and announced-attendance context.",
+    prompts: [
+      "Went through multiple drafts from first layout to updated dashboard versions.",
+      "Organized commercial categories into a more presentation-ready reporting view.",
+      "Supported review of revenue mix rather than isolated single-metric snapshots."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#revenue-streams-dashboard",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Consumer Products - Knoxville",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A consumer-products sales dashboard that broke down gross sales and size-level product movement for Knoxville.",
+    prompts: [
+      "Included daily sales views and breakdowns by size.",
+      "Separated quantity analysis from sales analysis so product movement was clearer.",
+      "Turned merchandise activity into a dashboard format for quicker review."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#consumer-products-knoxville",
+    primaryLabel: "View summary"
+  },
+  {
+    title: "Season to Single Game Ticket ATP",
+    badge: "Tableau dashboard",
+    status: "Description page",
+    summary:
+      "A ticket-pricing dashboard that used heatmaps and tables to review season-to-single-game average ticket price patterns.",
+    prompts: [
+      "Used match-day data to structure pricing review visually instead of manually.",
+      "Included heatmap and table views for different reading modes.",
+      "Focused on price movement and conversion patterns across ticket contexts."
+    ],
+    projectHref: "projects/tableau-dashboard-projects.html#season-to-single-game-ticket-atp",
+    primaryLabel: "View summary"
   }
 ];
 
@@ -312,6 +456,7 @@ const roleGroups = [
 
 const featuredGrid = document.querySelector("#featured-grid");
 const technicalGrid = document.querySelector("#technical-grid");
+const tableauGrid = document.querySelector("#tableau-grid");
 const experienceGrid = document.querySelector("#experience-grid");
 const rolesGrid = document.querySelector("#roles-grid");
 const skillsGrid = document.querySelector("#skills-grid");
@@ -322,10 +467,10 @@ const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
 const tabTriggers = Array.from(document.querySelectorAll("[data-tab-target]"));
 const isLocalPreview = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
 
-function buildTechnicalProjectLinks(build) {
+function buildProjectLinks(build) {
   const links = [
     {
-      label: "View project page",
+      label: build.primaryLabel || "View project page",
       href: build.projectHref
     }
   ];
@@ -372,12 +517,12 @@ function renderTechnicalProjects() {
   technicalGrid.innerHTML = technicalProjects
     .map(
       (build, index) => {
-        const links = buildTechnicalProjectLinks(build);
+        const links = buildProjectLinks(build);
 
         return `
         <article class="mini-card reveal" style="--delay:${index * 90}ms">
           <div class="card-topline">
-            <span class="badge">Project slot</span>
+            <span class="badge">${build.badge || "Application project"}</span>
             <span class="status-pill status-secondary">${build.status}</span>
           </div>
           <h3>${build.title}</h3>
@@ -386,15 +531,44 @@ function renderTechnicalProjects() {
             ${build.prompts.map((prompt) => `<li>${prompt}</li>`).join("")}
           </ul>
           ${build.publicNote ? `<p class="project-note">${build.publicNote}</p>` : ""}
-          ${
-            links.length
-              ? `<div class="card-actions">${links
-                  .map((link) =>
-                    `<a class="button button--ghost" href="${link.href}" ${link.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${link.label}</a>`
-                  )
-                  .join("")}</div>`
-              : ""
-          }
+          ${links.length
+            ? `<div class="card-actions">${links
+                .map((link) =>
+                  `<a class="button button--ghost" href="${link.href}" ${link.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${link.label}</a>`
+                )
+                .join("")}</div>`
+            : ""}
+        </article>
+      `;
+      }
+    )
+    .join("");
+}
+
+function renderTableauProjects() {
+  tableauGrid.innerHTML = tableauProjects
+    .map(
+      (project, index) => {
+        const links = buildProjectLinks(project);
+
+        return `
+        <article class="mini-card reveal" style="--delay:${index * 70}ms">
+          <div class="card-topline">
+            <span class="badge">${project.badge || "Tableau dashboard"}</span>
+            <span class="status-pill status-secondary">${project.status}</span>
+          </div>
+          <h3>${project.title}</h3>
+          <p>${project.summary}</p>
+          <ul class="mini-list">
+            ${project.prompts.map((prompt) => `<li>${prompt}</li>`).join("")}
+          </ul>
+          ${links.length
+            ? `<div class="card-actions">${links
+                .map((link) =>
+                  `<a class="button button--ghost" href="${link.href}" ${link.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${link.label}</a>`
+                )
+                .join("")}</div>`
+            : ""}
         </article>
       `;
       }
@@ -625,6 +799,7 @@ function setupReveal() {
 
 renderFeaturedProjects();
 renderTechnicalProjects();
+renderTableauProjects();
 renderExperienceHighlights();
 renderRoles();
 renderSkills();
