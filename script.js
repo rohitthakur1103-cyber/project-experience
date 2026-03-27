@@ -65,7 +65,7 @@ const technicalProjects = [
     ],
     projectHref: "projects/job-agent.html",
     localHref: "http://127.0.0.1:8012/",
-    publicNote: "Local interactive demo available. Public deployment for this app is not live yet."
+    publicNote: "This project currently uses a curated portfolio page while the public demo is still being developed."
   },
   {
     title: "Coaching Decision Research Dashboard",
@@ -79,8 +79,16 @@ const technicalProjects = [
     ],
     projectHref: "projects/coaching-decision-research.html",
     localHref: "http://127.0.0.1:8011/index.html",
-    publicHref: "https://github.com/rohitthakur1103-cyber/usl-coach-dashboard",
-    publicLabel: "Open repository"
+    publicLinks: [
+      {
+        label: "Open live app",
+        href: "https://rohitthakur1103-cyber.github.io/usl-coach-dashboard/"
+      },
+      {
+        label: "Open repository",
+        href: "https://github.com/rohitthakur1103-cyber/usl-coach-dashboard"
+      }
+    ]
   },
   {
     title: "Seaview Crabshack CRM System",
@@ -93,8 +101,12 @@ const technicalProjects = [
       "Built as a CRM layer on top of existing business systems rather than a full POS replacement."
     ],
     projectHref: "projects/seaview-crm.html",
-    publicHref: "https://seaview-crm.onrender.com",
-    publicLabel: "Open live app"
+    publicLinks: [
+      {
+        label: "Open live app",
+        href: "https://seaview-crm.onrender.com"
+      }
+    ]
   }
 ];
 
@@ -187,11 +199,8 @@ function buildTechnicalProjectLinks(build) {
     }
   ];
 
-  if (build.publicHref) {
-    links.push({
-      label: build.publicLabel || "Open project",
-      href: build.publicHref
-    });
+  if (build.publicLinks?.length) {
+    links.push(...build.publicLinks);
   }
 
   if (isLocalPreview && build.localHref) {
