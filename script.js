@@ -201,6 +201,8 @@ const skillsGrid = document.querySelector("#skills-grid");
 const modal = document.querySelector("#project-modal");
 const modalContent = document.querySelector("#modal-content");
 const closeButton = document.querySelector(".modal-close");
+const tabPanels = Array.from(document.querySelectorAll(".tab-panel"));
+const tabTriggers = Array.from(document.querySelectorAll("[data-tab-target]"));
 const isLocalPreview = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
 
 function buildTechnicalProjectLinks(build) {
@@ -319,6 +321,69 @@ function renderSkills() {
     .join("");
 }
 
+function revealPanel(panelId) {
+  const panel = document.getElementById(panelId);
+  if (!panel) {
+    return;
+  }
+
+  panel.querySelectorAll(".reveal").forEach((element) => {
+    element.classList.add("is-visible");
+  });
+}
+
+function activateTab(panelId, options = {}) {
+  const { updateHash = true } = options;
+  const targetPanel = document.getElementById(panelId);
+
+  if (!targetPanel) {
+    return;
+  }
+
+  tabPanels.forEach((panel) => {
+    const isActive = panel.id === panelId;
+    panel.hidden = !isActive;
+    panel.classList.toggle("is-active", isActive);
+  });
+
+  tabTriggers.forEach((trigger) => {
+    const isActive = trigger.dataset.tabTarget === panelId;
+    trigger.classList.toggle("is-active", isActive);
+
+    if (trigger.classList.contains("nav-tab")) {
+      trigger.setAttribute("aria-selected", isActive ? "true" : "false");
+    }
+  });
+
+  revealPanel(panelId);
+
+  if (updateHash) {
+    history.replaceState(null, "", `#${panelId}`);
+  }
+}
+
+function setupTabs() {
+  const defaultPanel = "selected-work";
+  const initialPanel = document.getElementById(window.location.hash.slice(1))
+    ? window.location.hash.slice(1)
+    : defaultPanel;
+
+  activateTab(initialPanel, { updateHash: false });
+
+  tabTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      activateTab(trigger.dataset.tabTarget);
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    const nextPanel = window.location.hash.slice(1);
+    if (document.getElementById(nextPanel)) {
+      activateTab(nextPanel, { updateHash: false });
+    }
+  });
+}
+
 function renderModal(project) {
   modalContent.innerHTML = `
     <div class="detail-header">
@@ -421,5 +486,6 @@ renderFeaturedProjects();
 renderTechnicalProjects();
 renderExperienceHighlights();
 renderSkills();
+setupTabs();
 setupInteractions();
 setupReveal();

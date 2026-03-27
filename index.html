@@ -14,12 +14,12 @@
     <div class="page-shell">
       <header class="topbar">
         <a class="brand" href="#home">Rohit Thakur</a>
-        <nav class="nav">
-          <a href="#selected-work">Selected Work</a>
-          <a href="#technical-projects">Technical Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+        <nav class="nav" aria-label="Portfolio sections" role="tablist">
+          <button class="nav-tab is-active" id="tab-selected-work" type="button" role="tab" aria-selected="true" aria-controls="selected-work" data-tab-target="selected-work">Selected Work</button>
+          <button class="nav-tab" id="tab-technical-projects" type="button" role="tab" aria-selected="false" aria-controls="technical-projects" data-tab-target="technical-projects">Technical Projects</button>
+          <button class="nav-tab" id="tab-experience" type="button" role="tab" aria-selected="false" aria-controls="experience" data-tab-target="experience">Experience</button>
+          <button class="nav-tab" id="tab-skills" type="button" role="tab" aria-selected="false" aria-controls="skills" data-tab-target="skills">Skills</button>
+          <button class="nav-tab" id="tab-contact" type="button" role="tab" aria-selected="false" aria-controls="contact" data-tab-target="contact">Contact</button>
         </nav>
       </header>
 
@@ -33,7 +33,7 @@
               supporting technical work, and experience that adds context to how I approach problems.
             </p>
             <div class="hero-actions">
-              <a class="button button--primary" href="#selected-work">View selected work</a>
+              <button class="button button--primary" type="button" data-tab-target="selected-work">View selected work</button>
               <a class="button button--ghost" href="assets/documents/rohit-thakur-resume.pdf" target="_blank" rel="noreferrer">Open resume</a>
             </div>
             <ul class="hero-tags">
@@ -71,7 +71,7 @@
           </aside>
         </section>
 
-        <section id="selected-work" class="section">
+        <section id="selected-work" class="section tab-panel is-active" role="tabpanel" aria-labelledby="tab-selected-work">
           <div class="section-heading reveal">
             <p class="section-kicker">Selected Work</p>
             <h2>Selected work</h2>
@@ -83,7 +83,7 @@
           <div id="featured-grid" class="card-grid featured-grid"></div>
         </section>
 
-        <section id="technical-projects" class="section">
+        <section id="technical-projects" class="section tab-panel" role="tabpanel" aria-labelledby="tab-technical-projects" hidden>
           <div class="section-heading reveal">
             <p class="section-kicker">Technical Projects</p>
             <h2>Technical projects</h2>
@@ -95,7 +95,7 @@
           <div id="technical-grid" class="card-grid compact-grid"></div>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section tab-panel" role="tabpanel" aria-labelledby="tab-experience" hidden>
           <div class="section-heading reveal">
             <p class="section-kicker">Experience Highlights</p>
             <h2>Experience</h2>
@@ -107,7 +107,7 @@
           <div id="experience-grid" class="card-grid experience-grid"></div>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section tab-panel" role="tabpanel" aria-labelledby="tab-skills" hidden>
           <div class="section-heading reveal">
             <p class="section-kicker">Skills &amp; Methods</p>
             <h2>Core tools and working modes</h2>
@@ -118,7 +118,7 @@
           <div id="skills-grid" class="skills-grid"></div>
         </section>
 
-        <section id="contact" class="section contact-section reveal">
+        <section id="contact" class="section contact-section tab-panel reveal" role="tabpanel" aria-labelledby="tab-contact" hidden>
           <div class="contact-card">
             <p class="section-kicker">Contact</p>
             <h2>Contact</h2>
