@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rohit Thakur | Portfolio Addendum</title>
+    <style>
+      @page {
+        size: Letter;
+        margin: 0.55in;
+      }
+
+      :root {
+        --ink: #11243d;
+        --muted: #58687c;
+        --line: #d7dee8;
+        --blue: #1650a3;
+        --red: #b33044;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        line-height: 1.4;
+        font-size: 11px;
+      }
+
+      a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+
+      .page {
+        display: grid;
+        gap: 16px;
+      }
+
+      .header {
+        display: grid;
+        gap: 10px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--line);
+      }
+
+      .name-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: end;
+      }
+
+      .name {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      .title {
+        margin: 5px 0 0;
+        color: var(--blue);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .contact {
+        text-align: right;
+        color: var(--muted);
+      }
+
+      .contact div + div {
+        margin-top: 3px;
+      }
+
+      .summary {
+        color: var(--muted);
+        font-size: 11.2px;
+      }
+
+      .resume-strip {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 16px;
+        padding: 10px 0 2px;
+      }
+
+      .resume-block {
+        display: grid;
+        gap: 5px;
+      }
+
+      .resume-label {
+        color: var(--red);
+        font-size: 9.6px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .resume-text {
+        color: var(--muted);
+        font-size: 10.6px;
+      }
+
+      .section {
+        display: grid;
+        gap: 8px;
+      }
+
+      .section-title {
+        margin: 0;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--line);
+        color: var(--red);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 18px;
+      }
+
+      .meta-list,
+      .skills-list {
+        display: grid;
+        gap: 6px;
+      }
+
+      .meta-item strong {
+        color: var(--ink);
+      }
+
+      .entry {
+        display: grid;
+        gap: 5px;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: baseline;
+      }
+
+      .entry-title {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.2;
+      }
+
+      .entry-meta {
+        color: var(--muted);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
+
+      .entry-sub {
+        color: var(--blue);
+        font-size: 10.2px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .entry p,
+      .entry li,
+      .meta-list,
+      .skills-list {
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 17px;
+      }
+
+      li + li {
+        margin-top: 4px;
+      }
+
+      .highlight-box {
+        padding: 12px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fbfcfe;
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .metric {
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: #fbfcfe;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--blue);
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 9.8px;
+      }
+
+      .small-note {
+        color: var(--muted);
+        font-size: 10px;
+      }
+
+      .divider {
+        border-top: 1px solid var(--line);
+        margin-top: 2px;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="header">
+        <div class="name-row">
+          <div>
+            <h1 class="name">Rohit Thakur</h1>
+            <p class="title">Portfolio Addendum</p>
+          </div>
+          <div class="contact">
+            <div><a href="mailto:rt4362@uncw.edu">rt4362@uncw.edu</a></div>
+            <div><a href="tel:+19194546826">(919) 454-6826</a></div>
+            <div><a href="https://rohitthakur1103-cyber.github.io/project-experience/">rohitthakur1103-cyber.github.io/project-experience</a></div>
+          </div>
+        </div>
+
+        <div class="summary">
+          This addendum is a general portfolio companion for applications across analytics, business intelligence,
+          business analysis, operations, revenue, and technical project roles. It highlights how I approach data,
+          reporting, systems work, and decision support across sports, commercial, and internal business contexts.
+        </div>
+
+        <div class="resume-strip">
+          <div class="resume-block">
+            <div class="resume-label">Academic Summary</div>
+            <div class="resume-text">
+              Student with experience translating coursework, internships, and applied projects into reporting,
+              dashboard, and systems-oriented work. Background includes business, analytics, and technical project
+              execution across both classroom and professional settings.
+            </div>
+          </div>
+          <div class="resume-block">
+            <div class="resume-label">Athletic Summary</div>
+            <div class="resume-text">
+              Former professional and Division I soccer player with experience in high-performance team environments,
+              disciplined preparation, and stakeholder-facing settings where consistency, accountability, and
+              decision-making under pressure matter.
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">Professional Snapshot</h2>
+        <div class="two-col">
+          <div class="highlight-box">
+            <div class="meta-list">
+              <div class="meta-item"><strong>Core work style:</strong> analytical, structured, and implementation-minded, with a focus on turning raw data into decisions and usable outputs.</div>
+              <div class="meta-item"><strong>Strongest functional areas:</strong> business intelligence, reporting, dashboard design, commercial analysis, and process-oriented systems work.</div>
+              <div class="meta-item"><strong>Relevant data exposure:</strong> CRM, ticketing, consumer, partnership, survey, player, and operational datasets.</div>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <div class="skills-list">
+              <div><strong>Best-fit roles:</strong> BI Analyst, Data Analyst, Business Analyst, Reporting Analyst, Revenue Analyst, Operations Analyst</div>
+              <div><strong>Core tools:</strong> SQL, Excel, Tableau, Power BI, Python, Java, JavaScript, SharePoint</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Selected Metrics</h2>
+        <div class="metrics">
+          <div class="metric">
+            <strong>38</strong>
+            <span>pro teams analyzed</span>
+          </div>
+          <div class="metric">
+            <strong>850+</strong>
+            <span>league matches reviewed</span>
+          </div>
+          <div class="metric">
+            <strong>20,000+</strong>
+            <span>player records analyzed</span>
+          </div>
+          <div class="metric">
+            <strong>20+</strong>
+            <span>executive-ready reports</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Relevant Project Work</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">USL League Two League-Wide Analysis</h3>
+            <div class="entry-meta">SQL | Python | Reporting</div>
+          </div>
+          <div class="entry-sub">Large-scale sports analytics and decision-support work</div>
+          <ul>
+            <li>Reviewed 850+ matches and 4,500+ players to extract scouting and player-pathway insight.</li>
+            <li>Used SQL and Python to move from raw league data to structured findings.</li>
+            <li>Delivered presentation-ready output for recruitment, development, and pathway conversations.</li>
+          </ul>
+        </article>
+
+        <article class="entry divider">
+          <div class="entry-head">
+            <h3 class="entry-title">Corporate Partnerships Target Revenue</h3>
+            <div class="entry-meta">Tableau | Revenue Planning</div>
+          </div>
+          <div class="entry-sub">Commercial modeling and scenario-based planning</div>
+          <ul>
+            <li>Built a multi-year partnership revenue model with adjustable assumptions and asset mix.</li>
+            <li>Turned pricing and commercial logic into a cleaner planning framework.</li>
+            <li>Relevant to broader revenue analysis, commercial strategy support, and scenario modeling.</li>
+          </ul>
+        </article>
+
+        <article class="entry divider">
+          <div class="entry-head">
+            <h3 class="entry-title">Coaching Decision Research Dashboard</h3>
+            <div class="entry-meta">Dashboard | Decision Support</div>
+          </div>
+          <div class="entry-sub">Executive-facing analysis and browser-based review workflows</div>
+          <ul>
+            <li>Built a multi-page dashboard to support retention, transition, hiring, and comparison decisions.</li>
+            <li>Structured the work for front-office review rather than static analysis.</li>
+            <li>Shows how I organize information so a stakeholder can act on it quickly.</li>
+          </ul>
+        </article>
+
+        <article class="entry divider">
+          <div class="entry-head">
+            <h3 class="entry-title">Seaview Crabshack CRM System</h3>
+            <div class="entry-meta">CRM | Internal Systems</div>
+          </div>
+          <div class="entry-sub">Systems thinking, customer data, and workflow support</div>
+          <ul>
+            <li>Built a CRM and marketing operations system to unify customer records and outreach processes.</li>
+            <li>Relevant to business systems, internal tooling, and process-improvement work.</li>
+            <li>Shows ownership beyond analysis alone, including workflow structure and execution support.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Additional Analytics and Dashboard Scope</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">Tableau Dashboard Portfolio</h3>
+            <div class="entry-meta">Sports | Commercial | Ticketing</div>
+          </div>
+          <ul>
+            <li>Player lineage and pathway dashboards across the Super and W-League ecosystem.</li>
+            <li>League table, points, and playoff projection dashboards across multiple competitions.</li>
+            <li>Ticketing revenue modeling, average ticket price analysis, revenue-stream reporting, and club support survey dashboards.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Experience Highlights</h2>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3 class="entry-title">Business Intelligence Analyst, USL</h3>
+            <div class="entry-meta">Internship experience</div>
+          </div>
+          <ul>
+            <li>Built Tableau dashboards across KPIs, player lineage, and roster analytics using 20,000+ player records and commercial data.</li>
+            <li>Conducted SQL and Excel analysis across CRM, ticketing, and consumer datasets.</li>
+            <li>Produced executive-ready reporting tied to commercial and operational questions.</li>
+          </ul>
+        </article>
+
+        <article class="entry divider">
+          <div class="entry-head">
+            <h3 class="entry-title">USL Men’s Soccer Pathway Analyst</h3>
+            <div class="entry-meta">May 2025 - Present</div>
+          </div>
+          <ul>
+            <li>Conducted roster and match analysis across 38 teams and delivered dashboards and visual reports to MLS and USL clubs.</li>
+            <li>Shows comfort with large-scale analysis and stakeholder-facing output.</li>
+          </ul>
+        </article>
+
+        <article class="entry divider">
+          <div class="entry-head">
+            <h3 class="entry-title">Software Engineer / IT Intern, W.R. Berkley</h3>
+            <div class="entry-meta">May 2024 - Aug 2024</div>
+          </div>
+          <ul>
+            <li>Built a B2B insurance rater application and supported underwriting site development.</li>
+            <li>Adds evidence of structured problem solving, internal tooling work, and implementation support.</li>
+          </ul>
+        </article>
+
+        <article class="entry divider">
+          <div class="entry-head">
+            <h3 class="entry-title">SharePoint Site Development Intern, Bright IT Services</h3>
+            <div class="entry-meta">May 2023 - May 2025</div>
+          </div>
+          <ul>
+            <li>Developed and deployed 10 SharePoint sites for 4 clients.</li>
+            <li>Adds client delivery, information-architecture, and process-aware implementation experience.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Direct Review Link</h2>
+        <div class="small-note">
+          Full portfolio: <a href="https://rohitthakur1103-cyber.github.io/project-experience/">rohitthakur1103-cyber.github.io/project-experience</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
